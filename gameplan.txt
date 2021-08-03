@@ -1,0 +1,12 @@
+Test the outside api, play with it & set it up
+
+write the expected html
+
+write the api
+
+write the frontend
+
+integrate!
+
+start time: 6:00pm
+end time: N/A
