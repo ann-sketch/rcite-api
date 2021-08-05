@@ -10,7 +10,6 @@ app.use(cors())
 
 app.get('/download', (req, res) => {
   res.download(`${__dirname}\\reniescite.pdf`);
-  // res.json("okay")
 });
 
 app.get("/", (req, res) => {
@@ -31,11 +30,10 @@ app.post('/', (req, res) => {
 
     pdf.create(html, options).toFile('./reniescite.pdf', function (err, res) {
       if (err) return console.log(err);
-      console.log(res); // { filename: '/app/businesscard.pdf' }
+      console.log(res); 
     });
-    // res.download(`${__dirname}\\reniescite.pdf`);
-    // res.json(`${__dirname}\\reniescite.pdf`)
-    res.redirect("/download")
+
+    res.status(200).json({"status":"ok"})
   } else {
     res.json({ "status": "error" });
   }
