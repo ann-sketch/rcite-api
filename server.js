@@ -40,8 +40,7 @@ app.post('/', (req, res) => {
 
 })
 
-const port = 5000
-app.listen(port, () => { console.log(`Server started on port ${port}`) });
+app.listen(process.env.PORT || 3000);
 
 // static html code from document html to tbody
 const topCode = `<!DOCTYPE html>
