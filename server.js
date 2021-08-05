@@ -8,10 +8,14 @@ const options = { format: "Letter" };
 app.use(express.json())
 app.use(cors())
 
-app.get('/download', function (req, res) {
+app.get('/download', (req, res) => {
   res.download(`${__dirname}\\reniescite.pdf`);
   // res.json("okay")
 });
+
+app.get("/", (req, res) => {
+  res.send("Connected.")
+})
 
 app.post('/', (req, res) => {
   if (req.body) {
